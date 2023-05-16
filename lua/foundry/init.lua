@@ -1,7 +1,7 @@
 local remap = require('foundry.remappings')
 
 -- Create user command to load remappings from txt.
-vim.api.nvim_create_user_command('LoadForgeRemap', remap.load_remappings(), {})
+vim.api.nvim_create_user_command('LoadForgeRemap', remap.load_remappings, {})
 
 -- Create user command to generate and load remappings.
 vim.api.nvim_create_user_command('ForgeRemap', function()
@@ -18,6 +18,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     if client.name == 'solidity' then
       remap.load_remappings()
+    else
+      return
     end
   end
 })
