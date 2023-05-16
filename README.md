@@ -1,2 +1,3 @@
-# foundry.nvim
-Neovim plugin for Foundry toolkit for Ethereum.
+# foundry.nvim 🏗️🚧
+
+Neovim Foundry Plugin 
