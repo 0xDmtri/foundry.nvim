@@ -4,10 +4,7 @@ local remap = require('foundry.remappings')
 vim.api.nvim_create_user_command('LoadForgeRemap', remap.load_remappings, {})
 
 -- Create user command to generate and load remappings.
-vim.api.nvim_create_user_command('ForgeRemap', function()
-  remap.generate_remappings()
-  remap.load_remappings()
-end, {})
+vim.api.nvim_create_user_command('ForgeRemap', remap.generate_remappings, {})
 
 -- Create autocmd to generate and load remappings.
 vim.api.nvim_create_autocmd('LspAttach', {
